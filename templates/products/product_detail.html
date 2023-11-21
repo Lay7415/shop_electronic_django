@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{product.title}}</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        background-color: #0090b9;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-4 p-4">
+      <a href="{% url 'main' %}" class="btn btn-warning mb-3">Назад</a>
+      <h1>{{ product.title }}</h1>
+      <div class="row pt-4">
+        <div class="col-md-6">
+          <img src="{{ product.image.url }}" alt="{{ product.title }}" class="img-fluid">
+        </div>
+        <div class="col-md-6">
+          <p><strong>Price:</strong> ${{ product.price }}</p>
+          <p><strong>Description:</strong> {{ product.description }}</p>
+          <p><strong>Likes:</strong> {{ product.likes }}</p>
+        </div>
+      </div>
+    </div>
+  
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
